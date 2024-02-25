@@ -10,6 +10,7 @@
 对于此类文件该程序将不会进行任何处理,保留其原本的目录结构并在命令行窗口中给出出错位置.
 
 这个仓库以后也可能被我拿来存一些执行其他小功能的批处理程序.
+
 This batch program is initially designed to process dataset.
 It can flatten directory that expand too deeply.
 For example,"Directory_Layer_1"store many subdirectories named "1","2",..."300",etc.
