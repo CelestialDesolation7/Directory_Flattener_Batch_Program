@@ -21,14 +21,12 @@ pause
 goto main_process
 
 :name_changer
-
+:duplicate_check_loop
 set possible_duplicator=.\!file_name_now!^(!duplicate_index!^)!file_extension_now!
 set /a duplicate_index=!duplicate_index!+1
-if !duplicate_index! geq 300 (
-    set file_name_now=!file_name_now!^(!duplicate_index!^)
-    set /a duplicate_index=1
+IF EXIST "!possible_duplicator!" (
+    goto :duplicate_check_loop
 )
-IF EXIST "!possible_duplicator!" call :name_changer
 goto :eof
 
 :mover
